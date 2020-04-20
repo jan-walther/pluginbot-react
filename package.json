@@ -11,7 +11,7 @@
   "license": "MIT",
   "main": "pluginbot-react.js",
   "dependencies": {
-    "pluginbot": "^0.2.4",
+    "pluginbot": "jan-walther/pluginbot",
     "react": "^16.13.1",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
