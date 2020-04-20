@@ -12,10 +12,10 @@
   "main": "pluginbot-react.js",
   "dependencies": {
     "pluginbot": "^0.2.4",
-    "react": "^16.4.0",
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
-    "redux-saga": "^0.15.6",
+    "react": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-saga": "^0.16.2",
     "servicebot-client": "^1.0.2"
   },
   "devDependencies": {
