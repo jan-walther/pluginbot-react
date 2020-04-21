@@ -1,7 +1,15 @@
 {
-  "presets" : ["es2015", "react"],
-  "plugins" : [ "transform-async-to-generator", "transform-object-rest-spread",["transform-runtime", {
-    "polyfill": false,
-    "regenerator": true
-  }]]
+  "presets": [
+    "@babel/env",
+    ["@babel/preset-react", { "runtime": "automatic" }]
+  ],
+  "plugins" : [    [
+    "@babel/transform-runtime",
+    {
+      "regenerator": true
+    }
+  ],
+    "@babel/transform-react-jsx",
+    "@babel/transform-async-to-generator"
+  ]
 }

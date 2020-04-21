@@ -1,69 +1,67 @@
-'use strict';
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
+exports["default"] = void 0;
 
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _createClass2 = require('babel-runtime/helpers/createClass');
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
-var _createClass3 = _interopRequireDefault(_createClass2);
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+var _jsxRuntime = require("react/jsx-runtime");
 
-var _inherits2 = require('babel-runtime/helpers/inherits');
+var _react = _interopRequireDefault(require("react"));
 
-var _inherits3 = _interopRequireDefault(_inherits2);
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _react = require('react');
+var _reactRedux = require("react-redux");
 
-var _react2 = _interopRequireDefault(_react);
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
 
-var _propTypes = require('prop-types');
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
-var _propTypes2 = _interopRequireDefault(_propTypes);
+var PluginbotProvider = /*#__PURE__*/function (_React$Component) {
+  (0, _inherits2["default"])(PluginbotProvider, _React$Component);
 
-var _reactRedux = require('react-redux');
+  var _super = _createSuper(PluginbotProvider);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  function PluginbotProvider(props) {
+    (0, _classCallCheck2["default"])(this, PluginbotProvider);
+    return _super.call(this, props);
+  }
 
-var PluginbotProvider = function (_React$Component) {
-    (0, _inherits3.default)(PluginbotProvider, _React$Component);
-
-    function PluginbotProvider(props) {
-        (0, _classCallCheck3.default)(this, PluginbotProvider);
-        return (0, _possibleConstructorReturn3.default)(this, (PluginbotProvider.__proto__ || Object.getPrototypeOf(PluginbotProvider)).call(this, props));
+  (0, _createClass2["default"])(PluginbotProvider, [{
+    key: "getChildContext",
+    value: function getChildContext() {
+      return {
+        pluginbot: this.props.pluginbot
+      };
     }
-
-    (0, _createClass3.default)(PluginbotProvider, [{
-        key: 'getChildContext',
-        value: function getChildContext() {
-            return { pluginbot: this.props.pluginbot };
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                _reactRedux.Provider,
-                { store: this.props.pluginbot.store },
-                this.props.children
-            );
-        }
-    }]);
-    return PluginbotProvider;
-}(_react2.default.Component);
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react["default"].createElement(_reactRedux.Provider, {
+        store: this.props.pluginbot.store
+      }, this.props.children);
+    }
+  }]);
+  return PluginbotProvider;
+}(_react["default"].Component);
 
 PluginbotProvider.childContextTypes = {
-    pluginbot: _propTypes2.default.object
+  pluginbot: _propTypes["default"].object
 };
-
 PluginbotProvider.propTypes = {
-    pluginbot: _propTypes2.default.object.isRequired
+  pluginbot: _propTypes["default"].object.isRequired
 };
-
-exports.default = PluginbotProvider;
+var _default = PluginbotProvider;
+exports["default"] = _default;

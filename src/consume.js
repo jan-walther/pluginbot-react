@@ -5,7 +5,7 @@ export default function(...servicesToConsume){
     return function(Component){
         const mapStateToProps = (state) => {
             if(!state.pluginbot){
-                console.error("pluginbot not initialized, try adding pluginbot provider")
+                console.error("pluginbot not initialized, try adding pluginbot provider");
                 return {services : {}};
             }
             let services = servicesToConsume.reduce((acc, service) => {

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Provider } from 'react-redux'
+import {Provider} from 'react-redux'
 
 
-class PluginbotProvider extends  React.Component{
-    constructor(props){
+class PluginbotProvider extends React.Component {
+    constructor(props) {
         super(props);
     }
 
@@ -13,18 +13,18 @@ class PluginbotProvider extends  React.Component{
     }
 
 
-    render(){
+    render() {
         return (<Provider store={this.props.pluginbot.store}>
-        {this.props.children}
-    </Provider>)
+            {this.props.children}
+        </Provider>)
     }
 
 
 }
 
 PluginbotProvider.childContextTypes = {
-    pluginbot : PropTypes.object
-}
+    pluginbot: PropTypes.object
+};
 
 PluginbotProvider.propTypes = {
     pluginbot: PropTypes.object.isRequired
