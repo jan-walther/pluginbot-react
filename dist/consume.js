@@ -17,8 +17,6 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _jsxRuntime = require("react/jsx-runtime");
-
 var _react = _interopRequireDefault(require("react"));
 
 var _reactRedux = require("react-redux");
